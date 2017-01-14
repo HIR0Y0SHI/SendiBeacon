@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFF83CE51E29F1E70007A330 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF83CE41E29F1E70007A330 /* AppDelegate.swift */; };
+		BFF83CE71E29F1E70007A330 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF83CE61E29F1E70007A330 /* ViewController.swift */; };
+		BFF83CEA1E29F1E70007A330 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF83CE81E29F1E70007A330 /* Main.storyboard */; };
+		BFF83CEC1E29F1E70007A330 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF83CEB1E29F1E70007A330 /* Assets.xcassets */; };
+		BFF83CEF1E29F1E70007A330 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF83CED1E29F1E70007A330 /* LaunchScreen.storyboard */; };
+		BFF83CF81E29F2900007A330 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF83CF71E29F2900007A330 /* CoreLocation.framework */; };
+		BFF83CFA1E29F29D0007A330 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF83CF91E29F29D0007A330 /* CoreBluetooth.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BFF83CE11E29F1E60007A330 /* SendiBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SendiBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFF83CE41E29F1E70007A330 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFF83CE61E29F1E70007A330 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BFF83CE91E29F1E70007A330 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFF83CEB1E29F1E70007A330 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFF83CEE1E29F1E70007A330 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BFF83CF01E29F1E70007A330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFF83CF71E29F2900007A330 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BFF83CF91E29F29D0007A330 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFF83CDE1E29F1E60007A330 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF83CFA1E29F29D0007A330 /* CoreBluetooth.framework in Frameworks */,
+				BFF83CF81E29F2900007A330 /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BFF83CD81E29F1E60007A330 = {
+			isa = PBXGroup;
+			children = (
+				BFF83CE31E29F1E60007A330 /* SendiBeacon */,
+				BFF83CE21E29F1E60007A330 /* Products */,
+				BFF83CF61E29F2900007A330 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BFF83CE21E29F1E60007A330 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFF83CE11E29F1E60007A330 /* SendiBeacon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFF83CE31E29F1E60007A330 /* SendiBeacon */ = {
+			isa = PBXGroup;
+			children = (
+				BFF83CE41E29F1E70007A330 /* AppDelegate.swift */,
+				BFF83CE61E29F1E70007A330 /* ViewController.swift */,
+				BFF83CE81E29F1E70007A330 /* Main.storyboard */,
+				BFF83CEB1E29F1E70007A330 /* Assets.xcassets */,
+				BFF83CED1E29F1E70007A330 /* LaunchScreen.storyboard */,
+				BFF83CF01E29F1E70007A330 /* Info.plist */,
+			);
+			path = SendiBeacon;
+			sourceTree = "<group>";
+		};
+		BFF83CF61E29F2900007A330 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFF83CF91E29F29D0007A330 /* CoreBluetooth.framework */,
+				BFF83CF71E29F2900007A330 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFF83CE01E29F1E60007A330 /* SendiBeacon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFF83CF31E29F1E70007A330 /* Build configuration list for PBXNativeTarget "SendiBeacon" */;
+			buildPhases = (
+				BFF83CDD1E29F1E60007A330 /* Sources */,
+				BFF83CDE1E29F1E60007A330 /* Frameworks */,
+				BFF83CDF1E29F1E60007A330 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SendiBeacon;
+			productName = SendiBeacon;
+			productReference = BFF83CE11E29F1E60007A330 /* SendiBeacon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFF83CD91E29F1E60007A330 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = M_HIRO;
+				TargetAttributes = {
+					BFF83CE01E29F1E60007A330 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 89UMLMHE33;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BFF83CDC1E29F1E60007A330 /* Build configuration list for PBXProject "SendiBeacon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFF83CD81E29F1E60007A330;
+			productRefGroup = BFF83CE21E29F1E60007A330 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFF83CE01E29F1E60007A330 /* SendiBeacon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFF83CDF1E29F1E60007A330 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF83CEF1E29F1E70007A330 /* LaunchScreen.storyboard in Resources */,
+				BFF83CEC1E29F1E70007A330 /* Assets.xcassets in Resources */,
+				BFF83CEA1E29F1E70007A330 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFF83CDD1E29F1E60007A330 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF83CE71E29F1E70007A330 /* ViewController.swift in Sources */,
+				BFF83CE51E29F1E70007A330 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BFF83CE81E29F1E70007A330 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFF83CE91E29F1E70007A330 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BFF83CED1E29F1E70007A330 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFF83CEE1E29F1E70007A330 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFF83CF11E29F1E70007A330 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BFF83CF21E29F1E70007A330 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFF83CF41E29F1E70007A330 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 89UMLMHE33;
+				INFOPLIST_FILE = SendiBeacon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.M-HIRO.SendiBeacon";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BFF83CF51E29F1E70007A330 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 89UMLMHE33;
+				INFOPLIST_FILE = SendiBeacon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.M-HIRO.SendiBeacon";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFF83CDC1E29F1E60007A330 /* Build configuration list for PBXProject "SendiBeacon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFF83CF11E29F1E70007A330 /* Debug */,
+				BFF83CF21E29F1E70007A330 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFF83CF31E29F1E70007A330 /* Build configuration list for PBXNativeTarget "SendiBeacon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFF83CF41E29F1E70007A330 /* Debug */,
+				BFF83CF51E29F1E70007A330 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFF83CD91E29F1E60007A330 /* Project object */;
+}
