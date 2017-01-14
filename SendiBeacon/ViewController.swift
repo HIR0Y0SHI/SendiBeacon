@@ -29,9 +29,12 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate {
     // minor
     var minor: Int = 0
     
-    
+    // ビーコン関連
     var beaconRegion: CLBeaconRegion!
     var beaconPeripheralData = NSDictionary()
+    
+    // UserDefault
+    let ud = UserDefaults.standard
     
     
     
@@ -40,6 +43,20 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate {
         
         // iBeacon発信
         myPeripheralManager = CBPeripheralManager(delegate: self, queue: nil)
+        
+        /* UserDefaultsから値を取得 */
+        // major
+        if let majorCode = ud.object(forKey: "major") {
+            major = majorCode as! Int
+        }
+        
+        // minor
+        if let minorCode = ud.object(forKey: "minor") {
+            minor = minorCode as! Int
+        }
+        
+        
+        updateLabelVal()
     }
     
     
@@ -75,11 +92,10 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate {
     }
     
     
+    
+    
     // iBeaconの設定を変更する
     func updateSettings() {
-        
-        print("updateSettings()")
-        
         
         if !majorTF.text!.isEmpty {
             major = Int(majorTF.text!)!
@@ -97,21 +113,38 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate {
         }
         
         
-        majorLabel.text = String(major)
-        minorLabel.text = String(minor)
-        
-        majorTF.text = String(major)
-        minorTF.text = String(minor)
+        // Labelの更新
+        updateLabelVal()
 
         
         beaconRegion = CLBeaconRegion.init(proximityUUID: myProximityUUID! as UUID, major: CLBeaconMajorValue(major), minor: CLBeaconMinorValue(minor), identifier: "hiroyoshi.matsumoto")
         
         beaconPeripheralData = NSDictionary(dictionary: beaconRegion.peripheralData(withMeasuredPower: nil))
-        
+
+        // Beaconを停止し新たな設定で再開始
         myPeripheralManager.stopAdvertising()
-        // 設定内容で変更
         myPeripheralManager.startAdvertising(beaconPeripheralData as? [String : AnyObject])
+        
+        
+        // UserDefaultsに設定を保持
+        ud.set(major, forKey: "major")
+        ud.set(minor, forKey: "minor")
+        ud.synchronize()
     }
+    
+    
+    
+    
+    // Labelの値を更新
+    func updateLabelVal() {
+        majorLabel.text = String(major)
+        minorLabel.text = String(minor)
+        
+        majorTF.text = String(major)
+        minorTF.text = String(minor)
+    }
+    
+    
     
     
 
