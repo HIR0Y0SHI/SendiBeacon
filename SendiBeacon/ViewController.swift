@@ -40,10 +40,6 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate {
         
         // iBeacon発信
         myPeripheralManager = CBPeripheralManager(delegate: self, queue: nil)
-        
-        beaconRegion = CLBeaconRegion.init(proximityUUID: myProximityUUID! as UUID, major: CLBeaconMajorValue(major), minor: CLBeaconMinorValue(minor), identifier: "hiroyoshi.matsumoto")
-        
-        beaconPeripheralData = NSDictionary(dictionary: beaconRegion.peripheralData(withMeasuredPower: nil))
     }
     
     
@@ -52,20 +48,71 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate {
 
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         
-        if peripheral.state == CBManagerState.poweredOn {
-            myPeripheralManager.startAdvertising(beaconPeripheralData as? [String : AnyObject])
-        }
+//        if #available(iOS 10.0, *) {
+//            if peripheral.state == CBManagerState.poweredOn {
+//                updateSettings()
+//            }
+//        }
         
+        updateSettings()
     }
     
+    
+    
+    
+    
+    // 反映ボタン
+    @IBAction func tapSetting(_ sender: Any) {
+        updateSettings()
+    }
+    
+
+    
+    
+    @IBAction func tapScreen(_ sender: Any) {
+        majorTF.endEditing(true)
+        minorTF.endEditing(true)
+    }
     
     
     // iBeaconの設定を変更する
-    @IBAction func tapSetting(_ sender: Any) {
+    func updateSettings() {
+        
+        print("updateSettings()")
+        
+        
+        if !majorTF.text!.isEmpty {
+            major = Int(majorTF.text!)!
+        } else {
+            major = 0
+            print("major -> 空")
+        }
+        
+        
+        if !minorTF.text!.isEmpty {
+            minor = Int(minorTF.text!)!
+        } else {
+            minor = 0
+            print("minor -> 空")
+        }
+        
+        
+        majorLabel.text = String(major)
+        minorLabel.text = String(minor)
+        
+        majorTF.text = String(major)
+        minorTF.text = String(minor)
+
+        
         beaconRegion = CLBeaconRegion.init(proximityUUID: myProximityUUID! as UUID, major: CLBeaconMajorValue(major), minor: CLBeaconMinorValue(minor), identifier: "hiroyoshi.matsumoto")
         
         beaconPeripheralData = NSDictionary(dictionary: beaconRegion.peripheralData(withMeasuredPower: nil))
+        
+        myPeripheralManager.stopAdvertising()
+        // 設定内容で変更
+        myPeripheralManager.startAdvertising(beaconPeripheralData as? [String : AnyObject])
     }
+    
     
 
     override func didReceiveMemoryWarning() {
