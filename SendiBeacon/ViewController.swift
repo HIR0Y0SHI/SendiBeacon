@@ -23,7 +23,7 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate {
     
     
     // UUID
-    let myProximityUUID = NSUUID.init(uuidString: "E86367B8-D8A8-4BE0-82DE-4653A7333113")
+    let myProximityUUID = NSUUID.init(uuidString: "00000000-7FA9-1001-B000-001C4DED901F")
     // major
     var major: Int = 0
     // minor
